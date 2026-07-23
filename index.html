@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alicerce — Sites que sustentam o crescimento do seu negócio</title>
+<meta name="description" content="Criação e manutenção de sites, landing pages e páginas de vendas para empresas e consultorias. Segurança, design profissional e um plano mensal calculado sob medida para o seu negócio.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0D141D">
+
+<!-- TROQUE pelo seu domínio real antes de publicar -->
+<link rel="canonical" href="https://seudominio.com.br/">
+
+<!-- Open Graph (como o link aparece quando compartilhado no WhatsApp/LinkedIn/Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://seudominio.com.br/">
+<meta property="og:site_name" content="Alicerce">
+<meta property="og:title" content="Alicerce — Sites que sustentam o crescimento do seu negócio">
+<meta property="og:description" content="Criação e manutenção de sites, landing pages e páginas de vendas para empresas e consultorias, com plano mensal sob medida.">
+<meta name="twitter:card" content="summary">
+
+<!-- Favicon (losango azul, mesmo ícone da marca) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 2L24 8V18L13 24L2 18V8L13 2Z' fill='%230D141D' stroke='%235AA9E6' stroke-width='1.6'/%3E%3Cpath d='M13 8L18 11V17L13 20L8 17V11L13 8Z' fill='%23D9A94A'/%3E%3C/svg%3E">
+
+<!--
+  ANALYTICS E PIXEL — descomente e cole o seu ID quando tiver uma conta.
+  Google Analytics 4 (substitua G-XXXXXXX pelo seu ID de mensuração):
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  Meta Pixel (substitua SEU_PIXEL_ID pelo ID do Gerenciador de Eventos):
+
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-dark:#0D141D;
+    --bg-dark-2:#141F2C;
+    --bg-dark-3:#1B2836;
+    --blueprint:#5AA9E6;
+    --blueprint-dim:#3E7CB1;
+    --gold:#D9A94A;
+    --gold-dim:#B98E38;
+    --paper:#F6F3EC;
+    --paper-dim:#EAE5D6;
+    --text-light:#E9E6DC;
+    --text-light-dim:#9FAFC0;
+    --text-dark:#161F2B;
+    --text-dark-dim:#5B6675;
+    --line:rgba(90,169,230,0.25);
+    --line-strong:rgba(90,169,230,0.5);
+    --radius:2px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--text-dark);
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    opacity:0;
+    transition:opacity .35s ease;
+  }
+  body.is-ready{opacity:1;}
+  .skip-link{
+    position:absolute; left:12px; top:-60px; z-index:100;
+    background:var(--gold); color:var(--text-dark);
+    padding:10px 16px; border-radius:4px; font-weight:600; font-size:14px;
+    transition:top .2s ease;
+  }
+  .skip-link:focus{top:12px;}
+  @media (prefers-reduced-motion: reduce){
+    body{opacity:1; transition:none;}
+  }
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--text-dark);
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.02em;
+  }
+  a{color:inherit; text-decoration:none;}
+  button{
+    font:inherit; color:inherit; background:none; border:none;
+    padding:0; margin:0; cursor:pointer; text-align:inherit;
+  }
+  img,svg{display:block; max-width:100%;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  section{position:relative;}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- focus ---------- */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--blueprint);
+    outline-offset:3px;
+  }
+
+  /* ================= HEADER ================= */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(13,20,29,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(90,169,230,0.18);
+  }
+  .nav{
+    max-width:var(--maxw); margin:0 auto; padding:18px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600; font-size:19px;
+    color:var(--paper);
+  }
+  .logo .mark{width:26px; height:26px; flex-shrink:0;}
+  .navlinks{display:flex; gap:32px; align-items:center;}
+  .navlinks button{
+    color:var(--text-light-dim); font-size:14.5px; font-weight:500;
+    transition:color .2s ease;
+  }
+  .navlinks button:hover{color:var(--paper);}
+  .nav-cta{
+    background:var(--gold); color:var(--text-dark);
+    padding:10px 18px; border-radius:var(--radius);
+    font-weight:600; font-size:14px;
+    border:1px solid var(--gold);
+    transition:background .2s ease, transform .15s ease;
+  }
+  .nav-cta:hover{background:#E7B95B; transform:translateY(-1px);}
+  .burger{display:none;}
+
+  /* ================= HERO ================= */
+  .hero{
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(90,169,230,0.14), transparent 60%),
+      var(--bg-dark);
+    color:var(--paper);
+    padding:88px 0 70px;
+    overflow:hidden;
+    position:relative;
+    border-bottom:1px solid rgba(90,169,230,0.18);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:56px 56px;
+    opacity:0.35;
+    mask-image:linear-gradient(to bottom, black, transparent 85%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    position:relative; z-index:1;
+    display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--blueprint);
+    border:1px solid var(--line-strong);
+    padding:6px 12px; border-radius:100px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{content:"●"; font-size:8px; color:var(--gold);}
+  .hero h1{
+    font-size:clamp(32px, 4.4vw, 50px);
+    line-height:1.08;
+    color:var(--paper);
+    margin-bottom:22px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--blueprint);
+  }
+  .hero p.lead{
+    font-size:17.5px;
+    color:var(--text-light-dim);
+    max-width:520px;
+    margin-bottom:32px;
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:40px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 24px; border-radius:var(--radius);
+    font-weight:600; font-size:15px;
+    cursor:pointer; border:1px solid transparent;
+    transition:transform .15s ease, background .2s ease, border-color .2s ease;
+  }
+  .btn-primary{background:var(--gold); color:var(--text-dark);}
+  .btn-primary:hover{background:#E7B95B; transform:translateY(-2px);}
+  .btn-ghost{
+    background:transparent; color:var(--paper);
+    border-color:rgba(233,230,220,0.35);
+  }
+  .btn-ghost:hover{border-color:var(--paper); transform:translateY(-2px);}
+  .hero-scarcity{
+    font-size:12.5px; color:var(--gold);
+    margin-bottom:22px; display:flex; align-items:center; gap:8px;
+  }
+  .hero-scarcity::before{content:"◆"; font-size:9px;}
+  .hero-trust{
+    display:flex; gap:26px; flex-wrap:wrap;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px; color:var(--text-light-dim);
+  }
+  .hero-trust span{display:flex; align-items:center; gap:7px;}
+  .hero-trust svg{width:14px; height:14px; color:var(--blueprint); flex-shrink:0;}
+
+  /* --- blueprint drawing --- */
+  .draft{position:relative;}
+  .draft svg{width:100%; height:auto; overflow:visible;}
+  .draft-line{
+    fill:none; stroke:var(--blueprint); stroke-width:1.4;
+    stroke-dasharray:1400; stroke-dashoffset:1400;
+    animation:draw 2.6s ease forwards .3s;
+  }
+  .draft-line.slow{animation-duration:3.4s;}
+  @keyframes draw{ to{stroke-dashoffset:0;} }
+  .fillblock{opacity:0; animation:fadeblock .6s ease forwards;}
+  @keyframes fadeblock{ to{opacity:1;} }
+  .tag{font-family:'IBM Plex Mono', monospace; font-size:9px; fill:var(--blueprint-dim);}
+  .tag-gold{fill:var(--gold);}
+  @media (prefers-reduced-motion: reduce){
+    .draft-line{stroke-dashoffset:0; animation:none;}
+    .fillblock{opacity:1; animation:none;}
+  }
+
+  /* ================= SECTION HEADS ================= */
+  .sec-head{max-width:640px; margin-bottom:48px;}
+  .sec-head .eyebrow-light{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--blueprint-dim);
+    margin-bottom:14px; display:block;
+  }
+  .sheet-tag{
+    display:inline-flex; align-items:stretch;
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.03em;
+    border:1px solid rgba(22,31,43,0.22);
+    margin-bottom:18px;
+  }
+  .sheet-tag .num{
+    background:var(--text-dark); color:var(--paper);
+    padding:6px 10px; font-weight:500;
+  }
+  .sheet-tag .label{
+    padding:6px 12px; text-transform:uppercase; color:var(--text-dark-dim);
+  }
+  .sheet-tag.on-dark{border-color:rgba(90,169,230,0.35);}
+  .sheet-tag.on-dark .num{background:var(--gold); color:var(--text-dark);}
+  .sheet-tag.on-dark .label{color:var(--text-light-dim);}
+  .sec-head h2{font-size:clamp(26px,3vw,36px); line-height:1.15; margin-bottom:14px;}
+  .sec-head p{color:var(--text-dark-dim); font-size:16px; max-width:560px;}
+  .center{margin-left:auto; margin-right:auto; text-align:center;}
+
+  /* ================= TRUST STRIP ================= */
+  .trust-strip{
+    background:var(--paper-dim);
+    border-bottom:1px solid rgba(22,31,43,0.08);
+    padding:22px 0;
+  }
+  .trust-strip .wrap{
+    display:flex; flex-wrap:wrap; gap:28px; justify-content:space-between;
+    align-items:center;
+  }
+  .trust-item{
+    display:flex; align-items:center; gap:9px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px; color:var(--text-dark-dim);
+  }
+  .trust-item svg{width:16px; height:16px; color:var(--blueprint-dim); flex-shrink:0;}
+
+  /* ================= VALUE ================= */
+  .value{padding:90px 0 70px; background:var(--paper);}
+  .value-panel{
+    display:grid; grid-template-columns:repeat(3,1fr);
+    border:1px solid rgba(22,31,43,0.14); border-radius:3px; overflow:hidden;
+    background:#fff;
+  }
+  .value-card{padding:36px 32px; border-right:1px solid rgba(22,31,43,0.12);}
+  .value-card:last-child{border-right:none;}
+  .value-tag{
+    display:flex; align-items:center; gap:9px;
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.05em;
+    text-transform:uppercase; color:var(--gold-dim); margin-bottom:16px;
+  }
+  .value-tag svg{width:16px; height:16px; color:var(--blueprint-dim); flex-shrink:0;}
+  .value-card h4{font-size:17px; margin-bottom:10px; line-height:1.3;}
+  .value-card p{font-size:14.5px; color:var(--text-dark-dim);}
+
+  /* ================= PROBLEM ================= */
+  .problem{padding:96px 0 70px; background:var(--paper);}
+  .problem-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .problem-card{
+    background:#fff; border:1px solid rgba(22,31,43,0.08);
+    border-radius:var(--radius); padding:26px 22px;
+    position:relative;
+  }
+  .problem-card .num{
+    font-family:'IBM Plex Mono', monospace; font-size:12px;
+    color:var(--gold-dim); margin-bottom:14px; display:block;
+  }
+  .problem-card h4{font-size:16px; margin-bottom:8px;}
+  .problem-card p{font-size:14px; color:var(--text-dark-dim);}
+
+  /* ================= WHAT YOU GET ================= */
+  .offer{padding:90px 0; background:var(--bg-dark-2); color:var(--paper);}
+  .offer .sec-head p{color:var(--text-light-dim);}
+  .about-copy .sheet-tag{display:inline-flex;}
+  .offer-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:rgba(90,169,230,0.18); border:1px solid rgba(90,169,230,0.18); border-radius:var(--radius); overflow:hidden;}
+  .offer-item{background:var(--bg-dark-2); padding:34px 30px;}
+  .offer-item h4{
+    color:var(--paper); font-size:18px; margin-bottom:10px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .offer-item h4 svg{width:20px; height:20px; color:var(--gold); flex-shrink:0;}
+  .offer-item p{color:var(--text-light-dim); font-size:14.5px;}
+
+  /* ================= COMPARISON ================= */
+  .comparison{padding:80px 0; background:var(--paper-dim);}
+  .comparison-table{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .comp-col{
+    background:#fff; border-radius:6px; padding:30px 30px 26px;
+    border:1px solid rgba(22,31,43,0.07);
+  }
+  .comp-before{opacity:0.85;}
+  .comp-after{
+    border:1px solid rgba(217,169,74,0.45);
+    box-shadow:0 18px 36px -20px rgba(217,169,74,0.35);
+  }
+  .comp-label{
+    display:inline-block; font-size:12px; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--text-dark-dim); margin-bottom:18px;
+  }
+  .comp-label-gold{color:var(--gold-dim); font-weight:500;}
+  .comp-col ul{list-style:none;}
+  .comp-col li{
+    font-size:14.5px; color:var(--text-dark-dim); padding:11px 0 11px 26px; position:relative;
+    border-top:1px solid rgba(22,31,43,0.06);
+  }
+  .comp-col li:first-child{border-top:none;}
+  .comp-before li::before{
+    content:"—"; position:absolute; left:0; color:#B7BEC7; font-weight:600;
+  }
+  .comp-after li{color:var(--text-dark);}
+  .comp-after li::before{
+    content:"✓"; position:absolute; left:0; color:var(--gold-dim); font-weight:700;
+  }
+
+  /* ================= PROCESS ================= */
+  .process{padding:96px 0; background:var(--paper);}
+  .process-list{display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative;}
+  .process-list::before{
+    content:""; position:absolute; top:26px; left:0; right:0; height:1px;
+    background:repeating-linear-gradient(to right, rgba(22,31,43,0.18) 0 6px, transparent 6px 12px);
+    z-index:0;
+  }
+  .process-item{position:relative; z-index:1; padding-right:20px;}
+  .process-item .step-num{
+    width:52px; height:52px; border-radius:50%;
+    background:var(--bg-dark); color:var(--blueprint);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono', monospace; font-size:14px; font-weight:500;
+    margin-bottom:18px; border:1px solid var(--line-strong);
+  }
+  .process-item h4{font-size:16.5px; margin-bottom:8px;}
+  .process-item p{font-size:14px; color:var(--text-dark-dim);}
+
+  /* ================= ABOUT ================= */
+  .about{padding:90px 0; background:var(--paper);}
+  .about-grid{display:grid; grid-template-columns:0.6fr 1.4fr; gap:56px; align-items:center;}
+  .about-avatar svg{width:100%; max-width:220px; margin:0 auto;}
+  .about-copy h2{font-size:clamp(24px,2.8vw,32px); margin-bottom:18px; line-height:1.2;}
+  .about-copy p{font-size:15.5px; color:var(--text-dark-dim); margin-bottom:14px; max-width:580px;}
+  .about-points{display:flex; flex-direction:column; gap:10px; margin-top:18px;}
+  .about-points span{
+    display:flex; align-items:center; gap:10px; font-size:14.5px; color:var(--text-dark);
+  }
+  .about-points svg{width:17px; height:17px; color:var(--gold-dim); flex-shrink:0;}
+
+  /* ================= PRICING ================= */
+  .pricing{padding:96px 0; background:var(--bg-dark); color:var(--paper); position:relative; overflow:hidden;}
+  .pricing::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:56px 56px;
+    opacity:0.22;
+    mask-image:radial-gradient(circle at 50% 30%, black, transparent 70%);
+    pointer-events:none;
+  }
+  .pricing .sec-head{position:relative; z-index:2;}
+  .pricing .sec-head p{color:var(--text-light-dim);}
+  .pricing-sparkles{
+    position:absolute; inset:0; width:100%; height:100%;
+    z-index:0; pointer-events:none; mix-blend-mode:screen;
+  }
+  .pricing-glow{
+    position:absolute; left:50%; top:36%; width:680px; height:680px;
+    transform:translate(-50%,-50%);
+    background:radial-gradient(circle, rgba(90,169,230,0.32), rgba(90,169,230,0.06) 45%, transparent 70%);
+    filter:blur(50px);
+    z-index:0; pointer-events:none;
+  }
+  .vcr-outer{display:inline-block; overflow:hidden; vertical-align:top;}
+  .vcr-inner{
+    display:inline-block; transform:translateY(115%); opacity:0;
+    transition:transform .6s cubic-bezier(.22,1,.36,1), opacity .5s ease;
+  }
+  .vcr-target.revealed .vcr-inner{transform:translateY(0); opacity:1;}
+  @media (prefers-reduced-motion: reduce){
+    .vcr-inner{transform:none; opacity:1; transition:none;}
+    .pricing-sparkles{display:none;}
+  }
+  .price-card{
+    position:relative; z-index:2;
+    max-width:560px; margin:0 auto;
+    background:var(--bg-dark-2);
+    border:1px solid rgba(90,169,230,0.3);
+    border-radius:4px;
+    padding:44px 44px 38px;
+  }
+  .price-card .plan-name{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px;
+    letter-spacing:0.08em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:18px; display:block;
+  }
+  .factor-list{list-style:none; margin-bottom:26px;}
+  .factor-list li{
+    display:flex; gap:12px; align-items:flex-start;
+    font-size:14.5px; color:var(--text-light-dim);
+    padding:10px 0; border-top:1px solid rgba(90,169,230,0.14);
+  }
+  .factor-list li:first-child{border-top:none;}
+  .factor-icon{
+    width:30px; height:30px; flex-shrink:0; border-radius:6px;
+    background:rgba(90,169,230,0.12);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .factor-icon svg{width:16px; height:16px; color:var(--blueprint);}
+  .factor-list li b{color:var(--paper); font-weight:600;}
+  .factor-divider{height:1px; background:rgba(90,169,230,0.2); margin:0 0 26px;}
+  .price-list{list-style:none; margin-bottom:34px;}
+  .price-list li{
+    display:flex; gap:12px; align-items:flex-start;
+    font-size:14.5px; color:var(--text-light-dim);
+    padding:10px 0; border-top:1px solid rgba(90,169,230,0.14);
+  }
+  .price-list li:first-child{border-top:none;}
+  .price-list li svg{width:17px; height:17px; color:var(--blueprint); flex-shrink:0; margin-top:2px;}
+  .price-list li b{color:var(--paper); font-weight:600;}
+  .price-card .btn-primary{width:100%; justify-content:center; font-size:15.5px;}
+  .price-foot{
+    text-align:center; font-size:13px; color:var(--text-light-dim); margin-top:16px;
+  }
+  .pricing-badges{
+    position:relative; z-index:2;
+    display:flex; justify-content:center; gap:28px; flex-wrap:wrap;
+    margin-top:32px;
+  }
+  .p-badge{
+    display:flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-light-dim);
+  }
+  .p-badge svg{width:15px; height:15px; color:var(--blueprint); flex-shrink:0;}
+
+  /* ================= EXAMPLES ================= */
+  .examples{padding:96px 0; background:var(--paper);}
+  .examples-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .example-card{
+    background:#fff; border:1px solid rgba(22,31,43,0.08); border-radius:var(--radius);
+    overflow:hidden; transition:transform .25s ease, box-shadow .25s ease;
+    display:block; width:100%; text-align:left; font:inherit; color:inherit;
+    padding:0; cursor:pointer;
+  }
+  .example-card:hover{transform:translateY(-4px); box-shadow:0 14px 28px rgba(22,31,43,0.09);}
+  .example-card:focus-visible{outline:2px solid var(--blueprint); outline-offset:3px;}
+  .example-thumb{
+    height:150px; position:relative; overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .example-thumb svg{width:100%; height:100%;}
+  .example-body{padding:20px 22px;}
+  .example-body .tagline{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--blueprint-dim);
+    text-transform:uppercase; letter-spacing:0.06em; margin-bottom:6px; display:block;
+  }
+  .example-body h4{font-size:16.5px; margin-bottom:6px;}
+  .example-body p{font-size:13.5px; color:var(--text-dark-dim);}
+  .example-cta{
+    display:flex; align-items:center; gap:6px; margin-top:16px;
+    font-size:13px; font-weight:600; color:var(--blueprint-dim);
+    transition:gap .2s ease, color .2s ease;
+  }
+  .example-cta svg{width:15px; height:15px;}
+  .example-card:hover .example-cta{gap:10px; color:var(--gold-dim);}
+
+  /* ================= TESTIMONIALS ================= */
+  .testimonials{padding:90px 0; background:var(--paper-dim);}
+  .test-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .test-card{
+    background:#fff; border:1px solid rgba(22,31,43,0.08); border-radius:var(--radius);
+    padding:28px 26px;
+  }
+  .test-card .stars{color:var(--gold); font-size:14px; margin-bottom:14px; letter-spacing:2px;}
+  .test-card p{font-size:14.5px; color:var(--text-dark); margin-bottom:20px; font-style:italic;}
+  .test-who{display:flex; align-items:center; gap:12px;}
+  .test-avatar{
+    width:38px; height:38px; border-radius:50%; flex-shrink:0;
+    background:var(--bg-dark-2); color:var(--blueprint);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:14px;
+  }
+  .test-who .name{font-size:14px; font-weight:600;}
+  .test-who .role{font-size:12.5px; color:var(--text-dark-dim);}
+  .test-note{
+    margin-top:28px; font-size:12.5px; color:var(--text-dark-dim);
+    font-family:'IBM Plex Mono', monospace; text-align:center;
+  }
+
+  /* ================= FAQ ================= */
+  .faq{padding:90px 0; background:var(--paper);}
+  .faq-list{max-width:760px; margin:0 auto;}
+  .faq-item{border-bottom:1px solid rgba(22,31,43,0.12);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    padding:22px 4px; display:flex; justify-content:space-between; align-items:center; gap:20px;
+    font-family:'Space Grotesk', sans-serif; font-size:16.5px; font-weight:500; color:var(--text-dark);
+  }
+  .faq-q .plus{
+    width:20px; height:20px; flex-shrink:0; position:relative;
+  }
+  .faq-q .plus::before, .faq-q .plus::after{
+    content:""; position:absolute; background:var(--blueprint-dim);
+    top:50%; left:50%; transform:translate(-50%,-50%);
+  }
+  .faq-q .plus::before{width:14px; height:2px;}
+  .faq-q .plus::after{width:2px; height:14px; transition:transform .25s ease;}
+  .faq-item.open .plus::after{transform:translate(-50%,-50%) rotate(90deg) scale(0);}
+  .faq-a{
+    height:0; overflow:hidden;
+  }
+  .faq-a p{padding:0 4px 22px; font-size:14.5px; color:var(--text-dark-dim); max-width:640px;}
+
+  /* ================= CONTACT ================= */
+  .contact{padding:96px 0 100px; background:var(--bg-dark); color:var(--paper); position:relative; overflow:hidden;}
+  .contact::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:56px 56px; opacity:0.2;
+    mask-image:linear-gradient(to top, black, transparent 85%);
+    pointer-events:none;
+  }
+  .contact-grid{position:relative; z-index:1; display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;}
+  .contact h2{color:var(--paper); font-size:clamp(26px,3.2vw,36px); margin-bottom:16px;}
+  .contact p.lead{color:var(--text-light-dim); font-size:16px; max-width:440px; margin-bottom:28px;}
+  .contact-info-item{display:flex; gap:12px; align-items:flex-start; margin-bottom:18px;}
+  .contact-info-item svg{width:18px; height:18px; color:var(--blueprint); margin-top:2px; flex-shrink:0;}
+  .contact-info-item span{font-size:14.5px; color:var(--text-light-dim);}
+  .contact-info-item b{color:var(--paper); display:block; font-size:14.5px; margin-bottom:2px;}
+  .contact-promise{
+    display:flex; gap:14px; align-items:flex-start;
+    margin-top:26px; padding:20px; border-radius:4px;
+    border:1px solid rgba(90,169,230,0.25);
+    background:rgba(90,169,230,0.06);
+  }
+  .promise-badge{width:38px; height:38px; flex-shrink:0;}
+  .promise-badge svg{width:100%; height:100%;}
+  .contact-promise b{color:var(--paper); font-size:14.5px; display:block; margin-bottom:4px;}
+  .contact-promise p{color:var(--text-light-dim); font-size:13.5px; margin:0;}
+
+  form.contact-form{
+    background:var(--bg-dark-2); border:1px solid rgba(90,169,230,0.25);
+    border-radius:4px; padding:34px;
+  }
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;}
+  .field{display:flex; flex-direction:column; gap:7px; margin-bottom:16px;}
+  .field label{
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--text-light-dim);
+    text-transform:uppercase; letter-spacing:0.05em;
+  }
+  .field input, .field select, .field textarea{
+    background:var(--bg-dark); border:1px solid rgba(90,169,230,0.25);
+    border-radius:var(--radius); padding:12px 14px; color:var(--paper);
+    font-family:'Inter', sans-serif; font-size:14.5px;
+  }
+  .field textarea{resize:vertical; min-height:90px;}
+  .field input::placeholder, .field textarea::placeholder{color:#5A6B7C;}
+  form.contact-form .btn-primary{width:100%; justify-content:center; margin-top:6px; font-size:15.5px;}
+  .form-foot{font-size:12px; color:var(--text-light-dim); margin-top:14px; text-align:center;}
+
+  .form-status{
+    display:none; margin-top:16px; padding:14px 16px; border-radius:4px;
+    background:rgba(90,169,230,0.1); border:1px solid rgba(90,169,230,0.3);
+    font-size:13.5px; color:var(--text-light-dim); line-height:1.6;
+  }
+  .form-status.is-visible{display:block;}
+  .form-status b{color:var(--paper);}
+  .form-status a{color:var(--blueprint); text-decoration:underline;}
+  .form-status .copy-msg-btn{
+    background:none; border:none; padding:0; color:var(--blueprint);
+    text-decoration:underline; cursor:pointer; font:inherit;
+  }
+
+  /* ================= CADASTRO RÁPIDO ================= */
+  .quick-capture{background:var(--bg-dark-3); padding:38px 0;}
+  .qc-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:24px; flex-wrap:wrap;
+  }
+  .qc-text{max-width:440px;}
+  .qc-text b{display:block; color:var(--paper); font-size:16px; margin-bottom:4px;}
+  .qc-text span{font-size:13.5px; color:var(--text-light-dim);}
+  .qc-form{display:flex; gap:10px; flex-wrap:wrap; flex:1; justify-content:flex-end;}
+  .qc-form input{
+    background:var(--bg-dark); border:1px solid rgba(90,169,230,0.3); border-radius:4px;
+    padding:12px 16px; color:var(--paper); font-family:'Inter', sans-serif; font-size:14.5px;
+    min-width:220px; flex:1; max-width:280px;
+  }
+  .qc-form input::placeholder{color:#5A6B7C;}
+  .qc-form .btn-primary{padding:12px 22px; font-size:14.5px; white-space:nowrap;}
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  /* ================= FOOTER ================= */
+  footer{background:var(--bg-dark-3); color:var(--text-light-dim); padding:44px 0 30px;}
+  .footer-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;}
+  .footer-logo{display:flex; align-items:center; gap:9px; color:var(--paper); font-family:'Space Grotesk',sans-serif; font-weight:600;}
+  .footer-logo svg{width:20px; height:20px;}
+  .footer-links{display:flex; gap:24px; font-size:13.5px; flex-wrap:wrap;}
+  .footer-links a:hover, .footer-links button:hover{color:var(--paper);}
+  .footer-bottom{
+    margin-top:30px; padding-top:22px; border-top:1px solid rgba(90,169,230,0.14);
+    font-size:12.5px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  /* ================= INSTAGRAM FLOAT ================= */
+  .ig-float{
+    position:fixed; bottom:22px; right:22px; z-index:60;
+    width:56px; height:56px; border-radius:50%;
+    background:radial-gradient(circle at 30% 110%, #ffd776 0%, #f6923d 25%, #e1306c 50%, #c236a8 70%, #5851d8 100%);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    transition:transform .2s ease;
+  }
+  .ig-float:hover{transform:scale(1.08);}
+  .ig-float svg{width:26px; height:26px; color:#fff;}
+
+  /* ================= RESPONSIVE ================= */
+  @media (max-width:980px){
+    .navlinks{display:none;}
+    .hero-grid{grid-template-columns:1fr; gap:44px;}
+    .draft{order:-1; max-width:420px; margin:0 auto;}
+    .value-panel{grid-template-columns:1fr;}
+    .value-card{border-right:none; border-bottom:1px solid rgba(22,31,43,0.12);}
+    .value-card:last-child{border-bottom:none;}
+    .problem-grid{grid-template-columns:repeat(2,1fr);}
+    .offer-grid{grid-template-columns:1fr;}
+    .comparison-table{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr; text-align:center;}
+    .about-avatar{margin:0 auto;}
+    .process-list{grid-template-columns:repeat(2,1fr); row-gap:36px;}
+    .process-list::before{display:none;}
+    .examples-grid{grid-template-columns:1fr 1fr;}
+    .test-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .form-row{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .problem-grid{grid-template-columns:1fr;}
+    .examples-grid{grid-template-columns:1fr;}
+    .price-card{padding:32px 24px;}
+    .footer-bottom{flex-direction:column;}
+    .qc-inner{flex-direction:column; align-items:stretch; text-align:center;}
+    .qc-text{max-width:none;}
+    .qc-form{justify-content:center;}
+    .qc-form input{max-width:none;}
+  }
+</style>
+</head>
+<body>
+<noscript><style>body{opacity:1 !important;}</style></noscript>
+<button type="button" data-scroll="#conteudo" class="skip-link">Pular para o conteúdo</button>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="nav">
+    <button type="button" data-scroll="#top" class="logo">
+      <svg class="mark" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L24 8V18L13 24L2 18V8L13 2Z" stroke="#5AA9E6" stroke-width="1.6" fill="none"/>
+        <path d="M13 8L18 11V17L13 20L8 17V11L13 8Z" fill="#D9A94A"/>
+      </svg>
+      Alicerce
+    </button>
+    <nav class="navlinks">
+      <button type="button" data-scroll="#servico">O serviço</button>
+      <button type="button" data-scroll="#processo">Como funciona</button>
+      <button type="button" data-scroll="#sobre">Sobre</button>
+      <button type="button" data-scroll="#planos">Plano</button>
+      <button type="button" data-scroll="#faq">Dúvidas</button>
+    </nav>
+    <button type="button" data-scroll="#contato" class="nav-cta">Solicitar diagnóstico</button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="sheet-tag on-dark"><span class="num">00</span><span class="label">Sites sob medida</span></span>
+      <h1>Enquanto seu site só <em>existe</em>, o do seu concorrente já está <em>vendendo</em> por ele.</h1>
+      <p class="lead">Criamos e cuidamos do site, landing page ou página de vendas da sua empresa ou consultoria — com design que passa autoridade, estrutura pensada para converter visita em cliente, e alguém de verdade cuidando disso todo mês.</p>
+      <div class="hero-ctas">
+        <button type="button" data-scroll="#contato" class="btn btn-primary">Quero meu site vendendo por mim</button>
+        <button type="button" data-scroll="#planos" class="btn btn-ghost">Ver como calculamos seu plano</button>
+      </div>
+      <p class="hero-scarcity mono">Atendemos poucos projetos por mês para dar atenção real a cada cliente.</p>
+      <div class="hero-trust">
+        <span><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16 7.5 20.5 12 22C16.5 20.5 20 16 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12L11 14L15.5 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Certificado SSL em todo site</span>
+        <span><svg viewBox="0 0 24 24" fill="none"><path d="M3 12A9 9 0 1112 21" stroke="currentColor" stroke-width="1.6"/><path d="M3 6V12H9" stroke="currentColor" stroke-width="1.6"/></svg> Backup automático diário</span>
+        <span><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M8 12H16M8 16H13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> Conforme a LGPD</span>
+      </div>
+    </div>
+
+    <div class="draft" aria-hidden="true">
+      <svg viewBox="0 0 460 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- browser frame -->
+        <rect class="draft-line" x="30" y="20" width="400" height="300" rx="6" stroke-dasharray="1400"/>
+        <line class="draft-line" x1="30" y1="56" x2="430" y2="56" stroke-dasharray="1400"/>
+        <circle class="draft-line" cx="52" cy="38" r="4" stroke-dasharray="60"/>
+        <circle class="draft-line" cx="68" cy="38" r="4" stroke-dasharray="60"/>
+        <circle class="draft-line" cx="84" cy="38" r="4" stroke-dasharray="60"/>
+
+        <!-- nav bar fill -->
+        <rect class="fillblock" x="46" y="70" width="60" height="10" rx="2" fill="var(--blueprint-dim)" style="animation-delay:1.6s"/>
+        <rect class="fillblock" x="330" y="68" width="80" height="16" rx="3" fill="var(--gold)" style="animation-delay:1.8s"/>
+
+        <!-- headline lines -->
+        <rect class="fillblock" x="46" y="108" width="220" height="14" rx="2" fill="#DDE7F0" style="animation-delay:2s"/>
+        <rect class="fillblock" x="46" y="130" width="160" height="14" rx="2" fill="#DDE7F0" style="animation-delay:2.15s"/>
+        <rect class="fillblock" x="46" y="160" width="130" height="9" rx="2" fill="#8FA7BD" style="animation-delay:2.3s"/>
+
+        <!-- CTA button -->
+        <rect class="fillblock" x="46" y="184" width="118" height="34" rx="3" fill="var(--gold)" style="animation-delay:2.45s"/>
+        <text class="fillblock tag-gold" x="66" y="205" font-size="11" font-family="IBM Plex Mono" style="animation-delay:2.6s">Fale conosco</text>
+
+        <!-- cards -->
+        <rect class="draft-line slow" x="46" y="238" width="110" height="66" rx="4" stroke-dasharray="1400"/>
+        <rect class="draft-line slow" x="175" y="238" width="110" height="66" rx="4" stroke-dasharray="1400"/>
+        <rect class="draft-line slow" x="304" y="238" width="110" height="66" rx="4" stroke-dasharray="1400"/>
+        <rect class="fillblock" x="58" y="252" width="60" height="8" rx="2" fill="#8FA7BD" style="animation-delay:2.9s"/>
+        <rect class="fillblock" x="187" y="252" width="60" height="8" rx="2" fill="#8FA7BD" style="animation-delay:3s"/>
+        <rect class="fillblock" x="316" y="252" width="60" height="8" rx="2" fill="#8FA7BD" style="animation-delay:3.1s"/>
+
+        <!-- dimension annotations -->
+        <line class="draft-line" x1="30" y1="340" x2="430" y2="340" stroke-dasharray="1400" style="animation-delay:.2s"/>
+        <line class="draft-line" x1="30" y1="334" x2="30" y2="346" stroke-dasharray="1400" style="animation-delay:.2s"/>
+        <line class="draft-line" x1="430" y1="334" x2="430" y2="346" stroke-dasharray="1400" style="animation-delay:.2s"/>
+        <text class="tag" x="200" y="362">100% RESPONSIVO</text>
+        <text class="tag" x="30" y="16">PROJETO_SITE.V1</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="trust-strip">
+  <div class="wrap">
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16 7.5 20.5 12 22C16.5 20.5 20 16 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.6"/></svg>Hospedagem segura e monitorada</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Site no ar em poucas semanas</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.6"/></svg>Suporte direto, sem robô</span>
+    <span class="trust-item"><svg viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15.5 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>Mudanças incluídas todo mês</span>
+  </div>
+</div>
+
+<!-- ============ VALUE ============ -->
+<section class="value" id="valor">
+  <div class="wrap">
+    <div class="sec-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="sheet-tag"><span class="num">01</span><span class="label">Por que isso importa</span></span>
+      <h2>Um bom site não custa. Ele paga a própria conta.</h2>
+      <p style="margin-left:auto;margin-right:auto;">Não é sobre ter uma página bonita — é sobre o que ela faz pelo seu negócio todos os dias, mesmo quando você não está olhando.</p>
+    </div>
+    <div class="value-panel">
+      <div class="value-card reveal">
+        <span class="value-tag"><svg viewBox="0 0 24 24" fill="none"><path d="M2 12S5 5 12 5S22 12 22 12S19 19 12 19S2 12 2 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg>Det. A</span>
+        <h4>A primeira impressão que decide</h4>
+        <p>Antes de ler uma palavra sobre você, o visitante já formou uma opinião pelo visual do site. Um layout confuso ou datado faz o cliente sair antes mesmo de te conhecer direito.</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-tag"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 8.5L21 9L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9L9.5 8.5L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Det. B</span>
+        <h4>Autoridade que sustenta o preço</h4>
+        <p>Um site bem construído comunica competência antes mesmo da conversa começar. Isso muda o tipo de pergunta que o cliente faz: menos "quanto custa" e mais "quando começamos".</p>
+      </div>
+      <div class="value-card reveal">
+        <span class="value-tag"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7V12L16 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Det. C</span>
+        <h4>Trabalhando mesmo offline</h4>
+        <p>Enquanto você atende um cliente, resolve outro assunto ou está descansando, o site continua apresentando seu trabalho e recebendo os próximos contatos por você.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="problem" id="servico">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sheet-tag"><span class="num">02</span><span class="label">O problema</span></span>
+      <h2>Seu site atual está trabalhando contra você?</h2>
+      <p>A maioria dos sites de empresas e consultorias não é ruim por acaso — é ruim porque foi feito uma vez e nunca mais cuidado.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <span class="num mono">01</span>
+        <h4>Demora para carregar</h4>
+        <p>Cada segundo de espera é um cliente em potencial fechando a aba.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="num mono">02</span>
+        <h4>Não gera contato</h4>
+        <p>Visita bonita não paga conta. Sem um caminho claro até o "fale comigo", o site só decora.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="num mono">03</span>
+        <h4>Parece amador</h4>
+        <p>Template genérico e informação desatualizada passam insegurança justo na hora de fechar negócio.</p>
+      </div>
+      <div class="problem-card reveal">
+        <span class="num mono">04</span>
+        <h4>Ninguém cuida dele</h4>
+        <p>Depois de pronto, fica esquecido — sem atualização, sem backup, sem alguém para chamar quando trava.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT YOU GET ============ -->
+<section class="offer">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sheet-tag on-dark"><span class="num">03</span><span class="label">O que você recebe</span></span>
+      <h2>Não é só um site. É alguém cuidando dele com você.</h2>
+      <p>Cada projeto é pensado para o seu tipo de cliente — e continua sendo cuidado depois de publicado.</p>
+    </div>
+    <div class="offer-grid reveal">
+      <div class="offer-item">
+        <h4><svg viewBox="0 0 24 24" fill="none"><path d="M4 20L8.5 19L19 8.5C19.8 7.7 19.8 6.4 19 5.6L18.4 5C17.6 4.2 16.3 4.2 15.5 5L5 15.5L4 20Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Design sob medida</h4>
+        <p>Sem template genérico. Layout, cores e estrutura pensados para o público que você quer atrair.</p>
+      </div>
+      <div class="offer-item">
+        <h4><svg viewBox="0 0 24 24" fill="none"><path d="M3 17L9 11L13 15L21 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7H21V13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Otimizado para converter</h4>
+        <p>Textos, botões e fluxo de navegação organizados para transformar visita em contato direto — por Instagram ou e-mail.</p>
+      </div>
+      <div class="offer-item">
+        <h4><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16 7.5 20.5 12 22C16.5 20.5 20 16 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.6"/></svg>Hospedagem segura</h4>
+        <p>Certificado SSL, monitoramento e backup automático — seu site protegido sem você precisar entender de tecnologia.</p>
+      </div>
+      <div class="offer-item">
+        <h4><svg viewBox="0 0 24 24" fill="none"><path d="M17 2L21 6L11 16L7 17L8 13L17 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 21H20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Mudanças inclusas</h4>
+        <p>Trocou o serviço, o preço, o endereço? É só chamar. Ajustes e pequenas correções fazem parte da mensalidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON ============ -->
+<section class="comparison">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sheet-tag"><span class="num">04</span><span class="label">A diferença no dia a dia</span></span>
+      <h2>Site parado custa mais caro do que parece</h2>
+      <p>Não é só sobre ter um site — é sobre o que acontece com ele depois do primeiro mês.</p>
+    </div>
+    <div class="comparison-table">
+      <div class="comp-col comp-before">
+        <span class="comp-label mono">Site sem manutenção</span>
+        <ul>
+          <li>Fica desatualizado e ninguém percebe até perder um cliente</li>
+          <li>Uma falha de segurança pode tirá-lo do ar sem aviso</li>
+          <li>Qualquer mudança depende de achar alguém disponível</li>
+          <li>Envelhece visualmente enquanto os concorrentes se atualizam</li>
+        </ul>
+      </div>
+      <div class="comp-col comp-after">
+        <span class="comp-label mono comp-label-gold">Com a Alicerce</span>
+        <ul>
+          <li>Alguém acompanha, atualiza e avisa antes de virar problema</li>
+          <li>Monitoramento e backup reduzem o risco de ficar fora do ar</li>
+          <li>Mudança pedida, mudança feita — sem burocracia</li>
+          <li>Evolui junto com o seu negócio, mês após mês</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="processo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sheet-tag"><span class="num">05</span><span class="label">Como funciona</span></span>
+      <h2>Do primeiro papo ao site no ar</h2>
+      <p>Um processo direto, sem enrolação — você acompanha cada etapa antes de qualquer coisa ir para o ar.</p>
+    </div>
+    <div class="process-list">
+      <div class="process-item reveal">
+        <span class="step-num mono">01</span>
+        <h4>Diagnóstico</h4>
+        <p>Entendemos seu negócio, seu público e o que o site precisa fazer por você.</p>
+      </div>
+      <div class="process-item reveal">
+        <span class="step-num mono">02</span>
+        <h4>Design & estrutura</h4>
+        <p>Você aprova o layout e os textos antes de qualquer linha de código.</p>
+      </div>
+      <div class="process-item reveal">
+        <span class="step-num mono">03</span>
+        <h4>Desenvolvimento</h4>
+        <p>Construção com foco em velocidade, segurança e boa aparência em qualquer tela.</p>
+      </div>
+      <div class="process-item reveal">
+        <span class="step-num mono">04</span>
+        <h4>No ar & cuidado contínuo</h4>
+        <p>Site publicado e, a partir daí, manutenção mensal para ele nunca ficar parado no tempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="about-avatar reveal" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="96" fill="var(--bg-dark-2)" stroke="var(--line-strong)" stroke-width="1.4"/>
+        <circle cx="100" cy="80" r="34" fill="none" stroke="var(--blueprint)" stroke-width="1.6"/>
+        <path d="M46 168C50 132 72 116 100 116C128 116 150 132 154 168" fill="none" stroke="var(--blueprint)" stroke-width="1.6"/>
+        <circle cx="100" cy="100" r="96" fill="none" stroke="var(--gold)" stroke-width="1.4" stroke-dasharray="4 6" opacity="0.6"/>
+      </svg>
+    </div>
+    <div class="about-copy reveal">
+      <span class="sheet-tag"><span class="num">06</span><span class="label">Quem cuida do seu site</span></span>
+      <h2>Não existe equipe terceirizada nem robô no suporte</h2>
+      <p>Cada site que sai daqui é acompanhado de perto — do primeiro rascunho até o ajuste que você pede seis meses depois de publicado. Isso significa respostas rápidas, decisões consistentes e alguém que realmente conhece o seu negócio quando você chama.</p>
+      <p>Trabalhamos com poucos clientes por vez de propósito: dá para prestar atenção de verdade em cada site, em vez de tratar todo mundo como mais um número.</p>
+      <div class="about-points">
+        <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Contato direto, sem intermediários</span>
+        <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Prazos combinados e cumpridos</span>
+        <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Transparência sobre o que é ou não incluso</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing" id="planos">
+  <canvas class="pricing-sparkles" aria-hidden="true"></canvas>
+  <div class="pricing-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="sheet-tag on-dark"><span class="num">07</span><span class="label">Investimento</span></span>
+      <h2 class="vcr-target">Cada negócio paga o que faz sentido pro seu momento</h2>
+      <p style="margin-left:auto;margin-right:auto;">Sem tabela fixa. O valor da sua mensalidade é calculado a partir de um diagnóstico rápido sobre o seu negócio — pode ficar abaixo ou acima da média do mercado, dependendo do seu caso.</p>
+    </div>
+
+    <div class="price-card reveal">
+      <span class="plan-name mono">Como calculamos o seu valor</span>
+      <ul class="factor-list">
+        <li>
+          <span class="factor-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21H21M6 21V8L12 4L18 8V21M10 21V14H14V21" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <span><b>Porte da empresa</b> — de autônomo a operação com equipe, o esforço de manutenção muda.</span>
+        </li>
+        <li>
+          <span class="factor-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7V12L15 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <span><b>Tempo de mercado</b> — negócios mais consolidados costumam pedir um site com mais camadas.</span>
+        </li>
+        <li>
+          <span class="factor-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20L8.5 19L19 8.5C19.8 7.7 19.8 6.4 19 5.6L18.4 5C17.6 4.2 16.3 4.2 15.5 5L5 15.5L4 20Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <span><b>Complexidade do site</b> — número de páginas, integrações e recursos especiais.</span>
+        </li>
+        <li>
+          <span class="factor-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M17 2L21 6L11 16L7 17L8 13L17 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+          <span><b>Volume de mudanças</b> — quanto você espera atualizar o site por mês.</span>
+        </li>
+      </ul>
+
+      <div class="factor-divider"></div>
+
+      <span class="plan-name mono">O que está incluso em qualquer plano</span>
+      <ul class="price-list">
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Hospedagem segura e monitorada</b> — SSL, uptime e proteção contra quedas.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Backup automático</b> — cópia de segurança do seu site sempre atualizada.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Correções e ajustes combinados</b> — textos, imagens, preços e novos itens, todo mês.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Atualizações de segurança</b> — seu site sempre protegido contra falhas conhecidas.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 13L9 17L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Suporte direto</b> — fala com quem construiu o site, sem central de atendimento.</span></li>
+      </ul>
+      <button type="button" data-scroll="#contato" class="btn btn-primary">Quero meu diagnóstico personalizado</button>
+      <p class="price-foot">Leva menos de 2 minutos. Você recebe o valor estimado junto com a proposta.</p>
+    </div>
+
+    <div class="pricing-badges reveal">
+      <span class="p-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L4 5V11C4 16 7.5 20.5 12 22C16.5 20.5 20 16 20 11V5L12 2Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 12L11 14L15.5 9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Sem letra miúda no contrato</span>
+      <span class="p-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Vagas limitadas por mês</span>
+      <span class="p-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.6"/></svg>Cancele quando quiser</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXAMPLES ============ -->
+<section class="examples" id="exemplos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sheet-tag"><span class="num">08</span><span class="label">Estilos de projeto</span></span>
+      <h2>Cada segmento pede um site diferente</h2>
+      <p>Alguns estilos que costumamos aplicar dependendo do seu tipo de negócio. O seu é desenhado do zero, para a sua marca.</p>
+    </div>
+    <div class="examples-grid">
+      <button type="button" class="example-card reveal" data-tipo="Site institucional">
+        <div class="example-thumb" style="background:#101B27;">
+          <svg viewBox="0 0 300 150" width="100%" height="100%">
+            <rect x="20" y="20" width="80" height="8" rx="2" fill="#5AA9E6"/>
+            <rect x="20" y="40" width="180" height="14" rx="2" fill="#E9E6DC"/>
+            <rect x="20" y="62" width="120" height="8" rx="2" fill="#7C8FA3"/>
+            <rect x="20" y="90" width="90" height="26" rx="3" fill="#D9A94A"/>
+          </svg>
+        </div>
+        <div class="example-body">
+          <span class="tagline">Consultorias</span>
+          <h4>Sóbrio & consultivo</h4>
+          <p>Foco em autoridade: cases, credenciais e um convite claro para agendar conversa.</p>
+          <span class="example-cta">Quero algo assim <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </button>
+      <button type="button" class="example-card reveal" data-tipo="Landing page">
+        <div class="example-thumb" style="background:#F0EBDD;">
+          <svg viewBox="0 0 300 150" width="100%" height="100%">
+            <rect x="20" y="20" width="70" height="8" rx="2" fill="#B98E38"/>
+            <rect x="20" y="40" width="200" height="14" rx="2" fill="#161F2B"/>
+            <circle cx="240" cy="100" r="26" fill="#3E7CB1"/>
+            <rect x="20" y="90" width="90" height="26" rx="3" fill="#161F2B"/>
+          </svg>
+        </div>
+        <div class="example-body">
+          <span class="tagline">Comércio & serviços</span>
+          <h4>Direto & comercial</h4>
+          <p>Catálogo, preços e um canal de contato sempre visível para fechar rápido.</p>
+          <span class="example-cta">Quero algo assim <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </button>
+      <button type="button" class="example-card reveal" data-tipo="Página de vendas">
+        <div class="example-thumb" style="background:#16202E;">
+          <svg viewBox="0 0 300 150" width="100%" height="100%">
+            <rect x="20" y="20" width="260" height="60" rx="4" fill="none" stroke="#5AA9E6" stroke-width="1.4"/>
+            <rect x="32" y="34" width="90" height="10" rx="2" fill="#E9E6DC"/>
+            <rect x="32" y="52" width="130" height="7" rx="2" fill="#7C8FA3"/>
+            <rect x="20" y="96" width="60" height="20" rx="3" fill="#D9A94A"/>
+            <rect x="90" y="96" width="60" height="20" rx="3" fill="none" stroke="#5AA9E6" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <div class="example-body">
+          <span class="tagline">Páginas de vendas</span>
+          <h4>Foco em conversão</h4>
+          <p>Estrutura enxuta: uma promessa, prova social e um único caminho até a compra.</p>
+          <span class="example-cta">Quero algo assim <svg viewBox="0 0 24 24" fill="none"><path d="M5 12H19M13 6L19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sheet-tag"><span class="num">09</span><span class="label">Depoimentos</span></span>
+      <h2>O que dizem sobre trabalhar com a gente</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Meu site antigo não gerava nenhum contato. Depois da mudança, começei a receber mensagens toda semana."</p>
+        <div class="test-who">
+          <div class="test-avatar">MC</div>
+          <div><div class="name">Mariana C.</div><div class="role">Consultoria financeira</div></div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"O que mais valeu foi o suporte depois de pronto — mudo o que preciso e fica resolvido no mesmo dia."</p>
+        <div class="test-who">
+          <div class="test-avatar">RS</div>
+          <div><div class="name">Rafael S.</div><div class="role">Consultoria jurídica</div></div>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Passamos a parecer uma empresa muito maior do que somos. Isso mudou o tipo de cliente que fecha com a gente."</p>
+        <div class="test-who">
+          <div class="test-avatar">JP</div>
+          <div><div class="name">Juliana P.</div><div class="role">Serviços contábeis</div></div>
+        </div>
+      </div>
+    </div>
+    <p class="test-note">* Depoimentos de exemplo — substitua pelos relatos reais dos seus primeiros clientes.</p>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <span class="sheet-tag"><span class="num">10</span><span class="label">Dúvidas frequentes</span></span>
+      <h2>Antes de fechar, esclareça o que precisar</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item open">
+        <button class="faq-q">Preciso pagar algo além da mensalidade?<span class="plus"></span></button>
+        <div class="faq-a"><p>A criação inicial do site é orçada de acordo com o escopo do projeto. A mensalidade começa depois de publicado e cobre hospedagem, segurança e manutenção.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Como vocês definem o valor da minha mensalidade?<span class="plus"></span></button>
+        <div class="faq-a"><p>A partir de um diagnóstico rápido sobre o seu negócio — porte, tempo de mercado, complexidade do site e volume de mudanças esperado. Você recebe o valor junto com a proposta, sem tabela fechada.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Posso cancelar quando quiser?<span class="plus"></span></button>
+        <div class="faq-a"><p>Sim, sem fidelidade obrigatória. Basta avisar com antecedência combinada em contrato — os detalhes ficam claros antes de começarmos.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Quanto tempo leva para o site ficar pronto?<span class="plus"></span></button>
+        <div class="faq-a"><p>Depende da complexidade, mas a maioria dos projetos fica pronta em poucas semanas após a aprovação do design.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Que tipo de mudança está incluída na mensalidade?<span class="plus"></span></button>
+        <div class="faq-a"><p>Ajustes de texto, imagens, preços e pequenas correções. Mudanças estruturais grandes, como novas seções ou nova identidade visual, são orçadas à parte.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Meus dados e os do meu cliente ficam seguros?<span class="plus"></span></button>
+        <div class="faq-a"><p>Sim. Todo site é publicado com certificado SSL, backup automático e boas práticas alinhadas à LGPD.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contato">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="sheet-tag on-dark"><span class="num">11</span><span class="label">Vamos conversar</span></span>
+      <h2>Peça seu diagnóstico personalizado</h2>
+      <p class="lead">Responda algumas perguntas sobre sua empresa. Com base nisso, montamos um plano mensal sob medida — o valor pode ficar abaixo ou acima da média, dependendo do seu caso.</p>
+
+      <div class="contact-info-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+        <span><b>Instagram</b><a href="https://instagram.com/alicerce_ofc" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">@alicerce_ofc</a></span>
+      </div>
+      <div class="contact-info-item">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7L12 13L21 7" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span><b>E-mail</b>alicercesuporte638@gmail.com</span>
+      </div>
+      <div class="contact-info-item">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7V12L15 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <span><b>Horário</b>Seg. a sex., 9h às 18h</span>
+      </div>
+
+      <div class="contact-promise reveal">
+        <div class="promise-badge">
+          <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21" stroke="var(--blueprint)" stroke-width="1.6"/><path d="M15 24L21 30L33 17" stroke="var(--gold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <b>Resposta em até 1 dia útil</b>
+          <p>Você recebe um retorno com os próximos passos e uma estimativa de valor — sem formulário caindo no vazio.</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="leadForm">
+      <div class="form-row">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+        </div>
+        <div class="field">
+          <label for="empresa">Empresa</label>
+          <input id="empresa" name="empresa" type="text" placeholder="Nome da empresa">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="seu@email.com" required>
+        </div>
+        <div class="field">
+          <label for="tempo">Tempo de mercado</label>
+          <select id="tempo" name="tempo">
+            <option>Menos de 1 ano</option>
+            <option>1 a 3 anos</option>
+            <option>3 a 10 anos</option>
+            <option>Mais de 10 anos</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="porte">Porte da empresa</label>
+          <select id="porte" name="porte">
+            <option>Autônomo(a) / MEI</option>
+            <option>Pequena empresa</option>
+            <option>Média ou grande empresa</option>
+            <option>Consultoria individual</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="siteAtual">Site hoje</label>
+          <select id="siteAtual" name="siteAtual">
+            <option>Ainda não tenho site</option>
+            <option>Tenho, mas está desatualizado</option>
+            <option>Tenho e quero redesenhar</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="tipo">Tipo de projeto</label>
+          <select id="tipo" name="tipo">
+            <option>Site institucional</option>
+            <option>Landing page</option>
+            <option>Página de vendas</option>
+            <option>Ainda não sei</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="instagram">Instagram (opcional)</label>
+          <input id="instagram" name="instagram" type="text" placeholder="@seu_perfil">
+        </div>
+      </div>
+      <div class="field">
+        <label for="msg">Conte brevemente sobre seu negócio</label>
+        <textarea id="msg" name="msg" placeholder="O que você faz e o que espera do site..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar e receber meu diagnóstico</button>
+      <p class="form-foot">Ao enviar, abrimos seu e-mail com a mensagem pronta para envio. Seus dados são usados só para essa conversa — veja nossa <a href="privacidade.html" style="color:var(--blueprint); text-decoration:underline;">Política de Privacidade</a>.</p>
+      <div class="form-status" id="formStatus" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ CADASTRO RÁPIDO ============ -->
+<section class="quick-capture">
+  <div class="wrap qc-inner reveal">
+    <div class="qc-text">
+      <b>Ainda não tem certeza?</b>
+      <span>Deixe só o seu e-mail e a gente entra em contato pra explicar melhor — sem precisar preencher o diagnóstico completo agora.</span>
+    </div>
+    <form class="qc-form" id="quickForm">
+      <label for="quickEmail" class="sr-only">Seu e-mail</label>
+      <input type="email" id="quickEmail" name="quickEmail" placeholder="seu@email.com" required>
+      <button type="submit" class="btn btn-primary">Quero saber mais</button>
+    </form>
+    <div class="form-status" id="quickStatus" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <button type="button" data-scroll="#top" class="footer-logo">
+        <svg viewBox="0 0 26 26" fill="none"><path d="M13 2L24 8V18L13 24L2 18V8L13 2Z" stroke="#5AA9E6" stroke-width="1.6"/><path d="M13 8L18 11V17L13 20L8 17V11L13 8Z" fill="#D9A94A"/></svg>
+        Alicerce
+      </button>
+      <div class="footer-links">
+        <button type="button" data-scroll="#servico">O serviço</button>
+        <button type="button" data-scroll="#planos">Plano</button>
+        <button type="button" data-scroll="#faq">Dúvidas</button>
+        <button type="button" data-scroll="#contato">Contato</button>
+        <a href="privacidade.html">Privacidade</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Alicerce. Todos os direitos reservados.</span>
+      <span>CNPJ 00.000.000/0001-00 — substitua pelos seus dados</span>
+    </div>
+  </div>
+</footer>
+
+<a class="ig-float" href="https://instagram.com/alicerce_ofc" target="_blank" rel="noopener" aria-label="Falar no Instagram">
+  <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.3" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+</a>
+
+<script>
+  // Dispara um mailto: de forma mais confiável (clique em link, em vez de
+  // apenas mudar a URL da página) e SEMPRE mostra um jeito manual de enviar
+  // logo abaixo, caso o e-mail não abra sozinho (falta de app configurado,
+  // navegador bloqueando, etc.) — assim a informação nunca se perde.
+  function enviarPorEmail(destino, assunto, corpo, statusEl) {
+    const url = `mailto:${destino}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.rel = 'noopener';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      console.error('Falha ao abrir o e-mail automaticamente:', err);
+    }
+
+    if (!statusEl) return;
+    statusEl.innerHTML =
+      '<b>Preparamos sua mensagem.</b> Se o seu e-mail não abriu automaticamente, ' +
+      '<a href="' + url + '" rel="noopener">clique aqui para abrir</a> ou ' +
+      '<button type="button" class="copy-msg-btn">copie a mensagem</button> e envie para <b>' + destino + '</b>.';
+    statusEl.classList.add('is-visible');
+
+    const copyBtn = statusEl.querySelector('.copy-msg-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        const textoCompleto = 'Assunto: ' + assunto + '\n\n' + corpo;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(textoCompleto).then(function () {
+            copyBtn.textContent = 'copiado!';
+          }).catch(function () { copyBtn.textContent = 'não foi possível copiar'; });
+        } else {
+          const ta = document.createElement('textarea');
+          ta.value = textoCompleto;
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); copyBtn.textContent = 'copiado!'; }
+          catch (e) { copyBtn.textContent = 'não foi possível copiar'; }
+          document.body.removeChild(ta);
+        }
+      });
+    }
+  }
+
+  // Navegação interna: os botões com data-scroll="#algo" rolam a página via
+  // JavaScript. Usar <button> em vez de <a href="#..."> evita qualquer aviso
+  // de "link externo" em pré-visualizações sandboxed.
+  document.addEventListener('DOMContentLoaded', function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('[data-scroll]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var id = this.getAttribute('data-scroll');
+        if (!id || id.length < 2) return;
+        var target = document.querySelector(id);
+        if (!target) return;
+        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+      });
+    });
+  });
+
+  // Loading elegante: revela a página assim que o HTML estiver pronto,
+  // sem depender da biblioteca de animação (evita flash de conteúdo).
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('is-ready');
+  });
+
+  // Rede de segurança: se por qualquer motivo a animação (Motion via CDN)
+  // não carregar ou falhar, garante que nenhum conteúdo fique invisível.
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        if (parseFloat(getComputedStyle(el).opacity) < 1) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        }
+      });
+    }, 2000);
+  });
+</script>
+
+<script type="module">
+  import { animate, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@11/+esm";
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ease = [0.22, 1, 0.36, 1];
+  const groupSelectors = ['.value-panel', '.problem-grid', '.offer-grid', '.comparison-table', '.process-list', '.examples-grid', '.test-grid'];
+
+  try {
+    if (!reduceMotion) {
+      // ---- entrada do herói, em cascata ----
+      animate(
+        '.hero .eyebrow, .hero h1, .hero p.lead, .hero-ctas, .hero-trust',
+        { opacity: [0, 1], y: [16, 0] },
+        { duration: 0.6, delay: stagger(0.08), easing: ease }
+      );
+
+      // ---- grids que revelam em cascata ao entrar na tela ----
+      groupSelectors.forEach(sel => {
+        const group = document.querySelector(sel);
+        if (!group) return;
+        inView(group, () => {
+          animate(
+            Array.from(group.children),
+            { opacity: [0, 1], y: [24, 0] },
+            { duration: 0.5, delay: stagger(0.09), easing: ease }
+          );
+        }, { margin: '-10% 0px -10% 0px' });
+      });
+
+      // ---- demais elementos .reveal (títulos, formulário, plano etc.) ----
+      document.querySelectorAll('.reveal').forEach(el => {
+        if (el.closest(groupSelectors.join(','))) return; // já tratado acima
+        inView(el, () => {
+          animate(el, { opacity: [0, 1], y: [20, 0] }, { duration: 0.6, easing: ease });
+        }, { margin: '-10% 0px -10% 0px' });
+      });
+
+      // ---- microinterações de hover / toque (só em elementos que realmente fazem algo) ----
+      document.querySelectorAll('.btn, .example-card, .ig-float').forEach(el => {
+        el.addEventListener('pointerenter', () => animate(el, { scale: 1.025 }, { duration: 0.2, easing: ease }));
+        el.addEventListener('pointerleave', () => animate(el, { scale: 1 }, { duration: 0.2, easing: ease }));
+        el.addEventListener('pointerdown', () => animate(el, { scale: 0.97 }, { duration: 0.1 }));
+        el.addEventListener('pointerup', () => animate(el, { scale: 1.025 }, { duration: 0.15 }));
+      });
+    } else {
+      // usuário pediu menos movimento: mostra tudo direto, sem animar
+      document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
+    }
+  } catch (err) {
+    console.error('Falha na animação de entrada, mostrando conteúdo direto:', err);
+    document.querySelectorAll('.reveal').forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
+  }
+
+  // ---- partículas subindo atrás do plano (canvas puro, sem lib externa) ----
+  try {
+    (function pricingSparkles() {
+      const canvas = document.querySelector('.pricing-sparkles');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w, h, particles = [];
+
+      function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        w = canvas.width = rect.width;
+        h = canvas.height = rect.height;
+      }
+      function makeParticle(spread) {
+        return {
+          x: Math.random() * w,
+          y: spread ? Math.random() * h : h + Math.random() * 30,
+          r: Math.random() * 1.3 + 0.4,
+          speed: Math.random() * 0.35 + 0.12,
+          drift: (Math.random() - 0.5) * 0.15,
+          alpha: Math.random() * 0.45 + 0.1,
+          twinkle: Math.random() * 0.015 + 0.004
+        };
+      }
+      function init() {
+        resize();
+        const count = Math.min(80, Math.floor(w / 16));
+        particles = Array.from({ length: count }, () => makeParticle(true));
+      }
+      function frame() {
+        ctx.clearRect(0, 0, w, h);
+        ctx.fillStyle = '#5AA9E6';
+        particles.forEach(p => {
+          p.y -= p.speed;
+          p.x += p.drift;
+          p.alpha += (Math.random() - 0.5) * p.twinkle;
+          p.alpha = Math.max(0.05, Math.min(0.55, p.alpha));
+          if (p.y < -8) { p.y = h + 8; p.x = Math.random() * w; }
+          ctx.globalAlpha = p.alpha;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fill();
+        });
+        ctx.globalAlpha = 1;
+        if (!reduceMotion) requestAnimationFrame(frame);
+      }
+      window.addEventListener('resize', resize);
+      init();
+      frame(); // desenha ao menos um quadro mesmo com movimento reduzido
+    })();
+  } catch (err) {
+    console.error('Falha nas partículas do plano (não afeta o resto do site):', err);
+  }
+
+  // ---- título do plano revelando palavra por palavra ----
+  try {
+    document.querySelectorAll('.vcr-target').forEach(el => {
+      const words = el.textContent.trim().split(' ');
+      el.innerHTML = words
+        .map((word, i) => `<span class="vcr-outer"><span class="vcr-inner" style="transition-delay:${i * 60}ms">${word}</span></span>`)
+        .join(' ');
+      if (reduceMotion) { el.classList.add('revealed'); return; }
+      inView(el, () => el.classList.add('revealed'), { margin: '-15% 0px -15% 0px' });
+    });
+  } catch (err) {
+    console.error('Falha no texto revelando (não afeta o resto do site):', err);
+    document.querySelectorAll('.vcr-target').forEach(el => el.classList.add('revealed'));
+  }
+
+  // ---- cards de exemplo levam ao formulário com o tipo de projeto já selecionado ----
+  try {
+    document.querySelectorAll('.example-card[data-tipo]').forEach(card => {
+      card.addEventListener('click', () => {
+        const tipoSelect = document.getElementById('tipo');
+        if (tipoSelect) tipoSelect.value = card.dataset.tipo;
+        const contato = document.getElementById('contato');
+        if (contato) contato.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+        window.setTimeout(() => {
+          const nome = document.getElementById('nome');
+          if (nome) nome.focus({ preventScroll: true });
+        }, reduceMotion ? 0 : 600);
+      });
+    });
+  } catch (err) {
+    console.error('Falha no clique dos cards de exemplo:', err);
+  }
+
+  // ---- acordeão do FAQ com altura animada ----
+  try {
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const q = item.querySelector('.faq-q');
+      const a = item.querySelector('.faq-a');
+      if (item.classList.contains('open')) a.style.height = 'auto';
+
+      q.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+          if (openItem !== item) {
+            openItem.classList.remove('open');
+            animate(openItem.querySelector('.faq-a'), { height: 0 }, { duration: 0.25, easing: ease });
+          }
+        });
+
+        if (isOpen) {
+          item.classList.remove('open');
+          animate(a, { height: 0 }, { duration: 0.25, easing: ease });
+        } else {
+          item.classList.add('open');
+          animate(a, { height: 'auto' }, { duration: 0.3, easing: ease });
+        }
+      });
+    });
+  } catch (err) {
+    console.error('Falha no acordeão do FAQ:', err);
+  }
+
+  // ---- formulário de contato -> e-mail ----
+  const form = document.getElementById('leadForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const empresa = document.getElementById('empresa').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const instagram = document.getElementById('instagram').value.trim();
+      const tempo = document.getElementById('tempo').value;
+      const porte = document.getElementById('porte').value;
+      const siteAtual = document.getElementById('siteAtual').value;
+      const tipo = document.getElementById('tipo').value;
+      const msg = document.getElementById('msg').value.trim();
+
+      const assunto = `Diagnóstico personalizado — ${nome}${empresa ? ' (' + empresa + ')' : ''}`;
+      const corpo = `Olá! Meu nome é ${nome}${empresa ? ' (' + empresa + ')' : ''}.\n\n` +
+        `Quero um diagnóstico personalizado.\n` +
+        `Tempo de mercado: ${tempo}\n` +
+        `Porte da empresa: ${porte}\n` +
+        `Situação do site hoje: ${siteAtual}\n` +
+        `Tipo de projeto: ${tipo}\n` +
+        (instagram ? `Instagram: ${instagram}\n` : '') +
+        (msg ? `\nSobre meu negócio: ${msg}\n` : '') +
+        `\nMeu e-mail para contato: ${email}`;
+
+      // TROQUE pelo seu e-mail real antes de publicar
+      const destino = 'alicercesuporte638@gmail.com';
+      enviarPorEmail(destino, assunto, corpo, document.getElementById('formStatus'));
+    });
+  }
+
+  // ---- cadastro rápido -> e-mail ----
+  try {
+    const quickForm = document.getElementById('quickForm');
+    if (quickForm) {
+      quickForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = document.getElementById('quickEmail').value.trim();
+        const assunto = 'Quero saber mais sobre o site personalizado';
+        const corpo = `Olá! Ainda não preenchi o diagnóstico completo, mas quero saber mais sobre o serviço.\n\nMeu e-mail para contato: ${email}`;
+        const destino = 'alicercesuporte638@gmail.com';
+        enviarPorEmail(destino, assunto, corpo, document.getElementById('quickStatus'));
+      });
+    }
+  } catch (err) {
+    console.error('Falha no cadastro rápido:', err);
+  }
+</script>
+
+</body>
+</html>
